@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: spring-tow-way-tls-server
+  main:
+    banner-mode: off
+logging:
+  level:
+    root: off
+server:
+  ssl:
+    enabled: true
+    client-auth: need
+    key-store: classpath:keystore.p12
+    key-store-password: abcdefg
+    key-store-type: PKCS12
+    key-alias: server
+    key-password: abcdefg
+    trust-store-type: PKCS12
+    trust-store: classpath:truststore.p12
+    trust-store-password: abcdefg
+
